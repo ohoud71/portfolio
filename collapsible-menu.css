@@ -1,0 +1,60 @@
+/* Add this to your existing styles.css */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-button {
+    display: none; /* Initially hide the button on larger screens */
+    cursor: pointer;
+}
+
+.close-button {
+    display: none; /* Initially hide the close button on larger screens */
+    cursor: pointer;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-list {
+        display: none; /* Hide the menu on smaller screens by default */
+        flex-direction: column;
+        position: absolute;
+        top: 50px; /* Adjust this value based on your header height */
+        left: 0;
+        background-color: var(--primary-color);
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .menu-button {
+        display: block; /* Display the menu button on smaller screens */
+    }
+
+    .close-button {
+        display: block; /* Display the close button on smaller screens */
+        background: #fff;
+        padding: 4px 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        border: none;
+    }
+}

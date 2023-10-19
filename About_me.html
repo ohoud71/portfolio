@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="collapsible-menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+       <div class="flex flex-row justify-between">
+        <p class="logo"><a href="Homepage.html" style="text-decoration: none; color: white;" >Ohoud</a></p>
+        <nav class="nav-container">
+         <button class="menu-button" id="menub" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars-staggered"></i></button>
+                <ul class="nav-list" id="navList">
+                    <li><a href="Homepage.html">Home</a></li>
+                    <li><a href="About_me.html">About</a></li>
+                    <li><a href="Resume_page.html">Resume</a></li>
+                    <li><a href="Blogpage.html">Blog</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li> <button class="close-button" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></button>
+                    </li>
+
+                </ul>
+           
+        </nav>
+       </div>
+    </header>
+
+    <section>
+        
+        <div class="container ">
+            <div class="box box1 ">
+                <h3>Hi , I'm Ohoud Hasan Alqumri</h3>
+                <p>A 22-year-old girl based in Riyadh. I'm passionate about Management Information Systems and constantly seeking opportunities to grow and contribute in the dynamic world of technology. Let's connect and explore the possibilities.</p>
+            </div>
+
+            <div class="box box2 center">
+              <div class="flex-col center">
+                <h3>Want to Contact Me ?</h3>
+              <a href="Contact.html" class="themeBtn">Contact Now</a>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy;   Ohoud Hasan Alqumri, 2023</p>
+    </footer>
+
+
+
+<script>
+    function toggleMenu() {
+    var navList = document.getElementById('navList');
+    navList.classList.toggle('show');
+    var menuB = document.getElementById('menub');
+    menuB.style.display = 'none'; // Show the close bu
+}
+
+function closeMenu() {
+    var navList = document.getElementById('navList');
+    navList.classList.remove('show');
+    var menuB = document.getElementById('menub');
+    menuB.style.display = 'block'; // Show the close bu
+}
+
+</script>
+</body>
+</html>
